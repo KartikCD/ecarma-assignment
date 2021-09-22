@@ -6,6 +6,7 @@
     <string name="text_splash_home"><![CDATA[Organize, manage & track all the maintenance and asset management of your community]]></string>
     <string name="text_get_started">GET STARTED</string>
     <string name="text_get_register">Register</string>
+    <string name="text_create_community">Create Community</string>
     <string name="text_sign_in">Sign In</string>
     <string name="text_onboard">Welcome Onboard!</string>
     <string name="text_welcome_back">Welcome Back !</string>
@@ -19,4 +20,12 @@
     <string name="string_hint_confirm_password"><b>Confirm Password</b></string>
     <string name="string_hint_upload_image"><b>Upload Image</b></string>
     <string name="string_hint_email_phone"><b>Enter Email or Phone No.</b></string>
+    <string name="string_add_new">Add New</string>
+    <string name="string_hint_community_name">Community Name</string>
+    <string name="string_hint_community_address">Community Address</string>
+    <string name="string_hint_community_city">City</string>
+    <string name="string_hint_community_location">Location</string>
+    <string name="string_hint_community_onboarding">Date of Onboarding</string>
+    <string name="string_hint_community_age">Age of Community</string>
+    <string name="string_hint_community_association">Association name</string>
 </resources>
