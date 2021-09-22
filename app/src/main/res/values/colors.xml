@@ -18,4 +18,7 @@
     <color name="buttonGradientStartColor">@color/colorPrimary</color>
     <color name="buttonGradientEndColor">#F4D375</color>
     <color name="buttonShadowColor">#B5B5B5</color>
+    
+    <color name="cardBackgroundColor">#97907C</color>
+    <color name="cardShadowColor">#B4B4B4</color>
 </resources>
