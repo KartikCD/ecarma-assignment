@@ -2,18 +2,33 @@ package io.kartikcd.ecarmaassignment
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import io.kartikcd.ecarmaassignment.adapter.AssetListAdapter
 import io.kartikcd.ecarmaassignment.adapter.AssociationListAdapter
 import io.kartikcd.ecarmaassignment.adapter.CommunityListAdapter
+import io.kartikcd.ecarmaassignment.databinding.ActivityMainBinding
 import io.kartikcd.ecarmaassignment.models.Association
 import io.kartikcd.ecarmaassignment.models.Community
 
 class MainActivity : AppCompatActivity() {
+
+    private var _binding: ActivityMainBinding? = null
+    private val binding get() = _binding!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_add_block)
+        _binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val navController = findNavController(R.id.main_host_fragment)
+//        val appBarConfiguration = AppBarConfiguration
+//            .Builder(R.id.splashFragment, R.id.registerFragment, R.id.loginFragment, R.id.mainFeedFragment)
+//            .build()
+//        setupActionBarWithNavController(navController, appBarConfiguration)
 
 //        val recyclerview = findViewById<RecyclerView>(R.id.recyclerview_associations)
 //
@@ -49,5 +64,15 @@ class MainActivity : AppCompatActivity() {
 //
 //        communityListAdapter.submitList(associations)
 
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.main_host_fragment)
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }
