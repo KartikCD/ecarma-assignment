@@ -2,11 +2,32 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout7"
+    android:id="@+id/frameLayout9"
     android:layout_width="match_parent"
-    android:background="@color/backgroundColor"
     android:layout_height="match_parent"
-    tools:context=".ui.mainfeed.community.association.AssociationDetailFragment">
+    android:background="@color/backgroundColor"
+    tools:context=".ui.mainfeed.community.block.AddBlockFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"
@@ -44,37 +65,42 @@
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineLeft"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineRight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.95" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.10" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview_associations"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/card_association_selector"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="24dp"
         app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
         app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toTopOf="@+id/guidelineTop" />
+        app:layout_constraintTop_toTopOf="@+id/guidelineTop">
+
+        <TextView
+            android:id="@+id/text_position"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="Total Apartments : 300 \nTotal Units Occupied: 250\nTotal Owners residing : 150\nTotal Floors : 10\nTotal Blocks : 4\nBlock Names: Block A, Block B, Block C, Block D"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:elevation="200dp"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintBottom_toTopOf="@+id/text_position"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_add_association"
+        android:id="@+id/button_add_block"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
@@ -86,6 +112,6 @@
         android:textStyle="bold"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerview_associations" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

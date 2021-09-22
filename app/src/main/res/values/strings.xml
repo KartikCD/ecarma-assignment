@@ -29,10 +29,10 @@
     <string name="string_hint_community_onboarding">Date of Onboarding</string>
     <string name="string_hint_community_age">Age of Community</string>
     <string name="string_hint_community_association">Association name</string>
-    
+
     <string name="string_hint_poc_name">Association POC Name</string>
     <string name="string_hint_poc_designation">Association POC Designation</string>
     <string name="string_hint_poc_contact">Association POC Contact</string>
-    <string name="string_hint_poc_email">Association POC Email ID</string>    
+    <string name="string_hint_poc_email">Association POC Email ID</string>
     <string name="string_hint_poc_number">Member Flat Number</string>
 </resources>
