@@ -6,12 +6,17 @@
     <string name="text_splash_home"><![CDATA[Organize, manage & track all the maintenance and asset management of your community]]></string>
     <string name="text_get_started">GET STARTED</string>
     <string name="text_get_register">Register</string>
+    <string name="text_sign_in">Sign In</string>
     <string name="text_onboard">Welcome Onboard!</string>
+    <string name="text_welcome_back">Welcome Back !</string>
     <string name="text_already_signin">Already have an account ? <b><font color="#E3AC0D">Sign in</font></b></string>
+    <string name="text_create_acc">Don\'t have an account ? <b><font color="#E3AC0D">Sign up</font></b></string>
+    <string name="text_forgot"><b><font color="#E3AC0D">Forgot Password?</font></b></string>
     <string name="string_hint_name"><b>Name</b></string>
     <string name="string_hint_email"><b>Email ID</b></string>
     <string name="string_hint_contact"><b>Enter Your Contact Number</b></string>
     <string name="string_hint_password"><b>Enter Password</b></string>
     <string name="string_hint_confirm_password"><b>Confirm Password</b></string>
     <string name="string_hint_upload_image"><b>Upload Image</b></string>
+    <string name="string_hint_email_phone"><b>Enter Email or Phone No.</b></string>
 </resources>
