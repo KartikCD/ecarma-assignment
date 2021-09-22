@@ -7,4 +7,15 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#E3AC0D</color>
+    <color name="colorPrimaryDark">#E3AC0D</color>
+    <color name="colorAccent">#E3AC0D</color>
+
+    <color name="backgroundColor">#EEEEEE</color>
+
+    <color name="buttonGradientMidColor">#F5BF21</color>
+    <color name="buttonGradientStartColor">@color/colorPrimary</color>
+    <color name="buttonGradientEndColor">#F4D375</color>
+    <color name="buttonShadowColor">#B5B5B5</color>
 </resources>
