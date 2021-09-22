@@ -21,4 +21,8 @@
     
     <color name="cardBackgroundColor">#97907C</color>
     <color name="cardShadowColor">#B4B4B4</color>
+    
+    <color name="companyCardStartColor">#672D35</color>
+    <color name="companyCardMidColor">#672D35</color>
+    <color name="companyCardEndColor">#8E676D</color>
 </resources>

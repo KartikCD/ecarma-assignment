@@ -10,7 +10,7 @@ import io.kartikcd.ecarmaassignment.models.Community
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_add_community)
+        setContentView(R.layout.fragment_register)
 
 //        val recyclerview = findViewById(R.id.recyclerview_community) as RecyclerView
 //
