@@ -48,4 +48,13 @@
         <item name="android:textSize">14sp</item>
         <item name="singleLine">true</item>
     </style>
+
+    <style name="ToolbarStyle" parent="Theme.MaterialComponents">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:actionMenuTextColor">@color/white</item>
+    </style>
+
+    <style name="Theme.AmmisKitchen.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.AmmisKitchen.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 </resources>
