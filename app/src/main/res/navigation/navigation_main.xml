@@ -12,10 +12,8 @@
         tools:layout="@layout/fragment_splash" >
         <action
             android:id="@+id/action_splashFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
-        <action
-            android:id="@+id/action_splashFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/registerFragment"
+            app:launchSingleTop="true" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -27,7 +25,10 @@
             app:destination="@id/loginFragment" />
         <action
             android:id="@+id/action_registerFragment_to_mainFeedFragment"
-            app:destination="@id/mainFeedFragment" />
+            app:destination="@id/mainFeedFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="false"/>
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -36,14 +37,19 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="false"/>
         <action
             android:id="@+id/action_loginFragment_to_mainFeedFragment"
-            app:destination="@id/mainFeedFragment" />
+            app:destination="@id/mainFeedFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/splashFragment"/>
     </fragment>
     <fragment
         android:id="@+id/mainFeedFragment"
         android:name="io.kartikcd.ecarmaassignment.ui.mainfeed.MainFeedFragment"
-        android:label="fragment_main_feed"
+        android:label="Welcome George Vincent"
         tools:layout="@layout/fragment_main_feed" />
 </navigation>

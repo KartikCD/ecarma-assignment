@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_mainfeed"
+    app:startDestination="@id/communityMainFragment">
+
+    <fragment
+        android:id="@+id/inboxFragment"
+        android:name="io.kartikcd.ecarmaassignment.ui.mainfeed.inbox.InboxFragment"
+        android:label="fragment_inbox"
+        tools:layout="@layout/fragment_inbox" />
+    <fragment
+        android:id="@+id/exploreFragment"
+        android:name="io.kartikcd.ecarmaassignment.ui.mainfeed.explore.ExploreFragment"
+        android:label="fragment_explore"
+        tools:layout="@layout/fragment_explore" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="io.kartikcd.ecarmaassignment.ui.mainfeed.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="io.kartikcd.ecarmaassignment.ui.mainfeed.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/communityMainFragment"
+        android:name="io.kartikcd.ecarmaassignment.ui.mainfeed.community.CommunityMainFragment"
+        android:label="fragment_community_main"
+        tools:layout="@layout/fragment_community_main" >
+        <action
+            android:id="@+id/action_communityMainFragment_to_communityFragment"
+            app:destination="@id/communityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/communityFragment"
+        android:name="io.kartikcd.ecarmaassignment.ui.mainfeed.community.CommunityFragment"
+        android:label="fragment_community"
+        tools:layout="@layout/fragment_community" >
+        <action
+            android:id="@+id/action_communityFragment_to_addCommunityFragment"
+            app:destination="@id/addCommunityFragment" />
+        <action
+            android:id="@+id/action_communityFragment_to_communityDetailsFragment"
+            app:destination="@id/communityDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCommunityFragment"
+        android:name="io.kartikcd.ecarmaassignment.ui.mainfeed.community.AddCommunityFragment"
+        android:label="fragment_add_community"
+        tools:layout="@layout/fragment_add_community" >
+        <action
+            android:id="@+id/action_addCommunityFragment_to_communityFragment"
+            app:destination="@id/communityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/communityDetailsFragment"
+        android:name="io.kartikcd.ecarmaassignment.ui.mainfeed.community.CommunityDetailsFragment"
+        android:label="fragment_community_details"
+        tools:layout="@layout/fragment_community_details" >
+        <action
+            android:id="@+id/action_communityDetailsFragment_to_associationDetailFragment"
+            app:destination="@id/associationDetailFragment" />
+        <action
+            android:id="@+id/action_communityDetailsFragment_to_communityFragment"
+            app:destination="@id/communityFragment" />
+        <action
+            android:id="@+id/action_communityDetailsFragment_to_addBlockFragment"
+            app:destination="@id/addBlockFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/associationDetailFragment"
+        android:name="io.kartikcd.ecarmaassignment.ui.mainfeed.community.association.AssociationDetailFragment"
+        android:label="fragment_association_detail"
+        tools:layout="@layout/fragment_association_detail" >
+        <action
+            android:id="@+id/action_associationDetailFragment_to_addAssociationDetailFragment"
+            app:destination="@id/addAssociationDetailFragment" />
+        <action
+            android:id="@+id/action_associationDetailFragment_to_communityDetailsFragment"
+            app:destination="@id/communityDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAssociationDetailFragment"
+        android:name="io.kartikcd.ecarmaassignment.ui.mainfeed.community.association.AddAssociationDetailFragment"
+        android:label="fragment_add_association_detail"
+        tools:layout="@layout/fragment_add_association_detail" >
+        <action
+            android:id="@+id/action_addAssociationDetailFragment_to_associationDetailFragment"
+            app:destination="@id/associationDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBlockFragment"
+        android:name="io.kartikcd.ecarmaassignment.ui.mainfeed.community.block.AddBlockFragment"
+        android:label="fragment_add_block"
+        tools:layout="@layout/fragment_add_block" >
+        <action
+            android:id="@+id/action_addBlockFragment_to_communityDetailsFragment"
+            app:destination="@id/communityDetailsFragment" />
+        <action
+            android:id="@+id/action_addBlockFragment_to_addBlockDetailFragment"
+            app:destination="@id/addBlockDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBlockDetailFragment"
+        android:name="io.kartikcd.ecarmaassignment.ui.mainfeed.community.block.AddBlockDetailFragment"
+        android:label="fragment_add_block_detail"
+        tools:layout="@layout/fragment_add_block_detail" >
+        <action
+            android:id="@+id/action_addBlockDetailFragment_to_addBlockFragment"
+            app:destination="@id/addBlockFragment" />
+    </fragment>
+</navigation>

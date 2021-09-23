@@ -1,60 +1,63 @@
 package io.kartikcd.ecarmaassignment.ui.mainfeed.community.association
 
+import android.graphics.PorterDuff
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import io.kartikcd.ecarmaassignment.R
+import io.kartikcd.ecarmaassignment.adapter.AssociationListAdapter
+import io.kartikcd.ecarmaassignment.databinding.FragmentAssociationDetailBinding
+import io.kartikcd.ecarmaassignment.databinding.FragmentCommunityDetailsBinding
+import io.kartikcd.ecarmaassignment.models.Association
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [AssociationDetailFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class AssociationDetailFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentAssociationDetailBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_association_detail, container, false)
+        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            requireActivity().window.statusBarColor = ContextCompat.getColor(requireActivity(), R.color.colorPrimaryDark)
+        }
+        val drawable = ContextCompat.getDrawable(requireContext(), R.drawable.ic_back_arrow)
+        drawable?.setColorFilter(ContextCompat.getColor(requireContext(), R.color.black), PorterDuff.Mode.SRC_ATOP)
+        (activity as AppCompatActivity?)!!.supportActionBar?.setHomeAsUpIndicator(drawable)
+        (requireActivity() as AppCompatActivity).supportActionBar?.title = "Association Details"
+        _binding = FragmentAssociationDetailBinding.inflate(layoutInflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AssociationDetailFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            AssociationDetailFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val associations = listOf(
+            Association("President", "Rahul Raj", "Flat 314", "9987746997", "xyz@gmail.com"),
+            Association("Vice President", "Ankit Gupta", "Flat 318", "8116162777", "xyz@gmail.com")
+        )
+
+        val associationAdapter = AssociationListAdapter()
+
+        binding.recyclerviewAssociations.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = associationAdapter
+        }
+
+        associationAdapter.submitList(associations)
+
+        binding.buttonAddAssociation.setOnClickListener {
+            findNavController().navigate(R.id.action_associationDetailFragment_to_addAssociationDetailFragment)
+        }
     }
+
 }

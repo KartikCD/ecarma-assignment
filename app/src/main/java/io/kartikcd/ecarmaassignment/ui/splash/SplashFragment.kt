@@ -1,10 +1,13 @@
 package io.kartikcd.ecarmaassignment.ui.splash
 
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
 import io.kartikcd.ecarmaassignment.R
 import io.kartikcd.ecarmaassignment.databinding.FragmentSplashBinding
@@ -19,6 +22,10 @@ class SplashFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            requireActivity().window.statusBarColor = ContextCompat.getColor(requireActivity(), R.color.backgroundColor)
+        }
         _binding = FragmentSplashBinding.inflate(layoutInflater, container, false)
         return binding.root
     }

@@ -1,7 +1,9 @@
 package io.kartikcd.ecarmaassignment
 
+import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -25,10 +27,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val navController = findNavController(R.id.main_host_fragment)
-//        val appBarConfiguration = AppBarConfiguration
-//            .Builder(R.id.splashFragment, R.id.registerFragment, R.id.loginFragment, R.id.mainFeedFragment)
-//            .build()
-//        setupActionBarWithNavController(navController, appBarConfiguration)
+        val appBarConfiguration = AppBarConfiguration
+            .Builder(R.id.splashFragment, R.id.registerFragment, R.id.loginFragment, R.id.main_feed_fragment)
+            .build()
+
+        setupActionBarWithNavController(navController, appBarConfiguration)
 
 //        val recyclerview = findViewById<RecyclerView>(R.id.recyclerview_associations)
 //

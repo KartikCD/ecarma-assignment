@@ -17,7 +17,9 @@ class AssetListAdapter: ListAdapter<String, AssetListAdapter.AssetListViewHolder
             binding.apply {
                 textCompanyName.text = name
                 root.setOnClickListener {
-
+                    onAssetClickListener?.let {
+                        it(name)
+                    }
                 }
             }
         }

@@ -25,4 +25,6 @@
     <color name="companyCardStartColor">#672D35</color>
     <color name="companyCardMidColor">#672D35</color>
     <color name="companyCardEndColor">#8E676D</color>
+    
+    <color name="bottomNavigationBackgroundColor">#97907C</color>
 </resources>

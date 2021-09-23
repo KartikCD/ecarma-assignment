@@ -35,4 +35,11 @@
     <string name="string_hint_poc_contact">Association POC Contact</string>
     <string name="string_hint_poc_email">Association POC Email ID</string>
     <string name="string_hint_poc_number">Member Flat Number</string>
+    
+    <string name="string_hint_units">Total apartment units</string>
+    <string name="string_hint_occupied">Total Units Occupied</string>
+    <string name="string_hint_residing">Total Owners Residing</string>
+    <string name="string_hint_floors">No of floors</string>
+    <string name="string_hint_blocks">No of blocks</string>
+    <string name="string_hint_name_block">Name of the blocks</string>
 </resources>

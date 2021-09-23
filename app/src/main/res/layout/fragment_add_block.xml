@@ -72,6 +72,7 @@
         android:background="@drawable/card_association_selector"
         android:paddingHorizontal="12dp"
         android:paddingVertical="24dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
         app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
         app:layout_constraintTop_toTopOf="@+id/guidelineTop">

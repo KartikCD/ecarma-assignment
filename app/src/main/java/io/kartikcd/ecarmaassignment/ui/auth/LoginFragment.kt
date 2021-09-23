@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import io.kartikcd.ecarmaassignment.R
 import io.kartikcd.ecarmaassignment.databinding.FragmentLoginBinding
@@ -20,6 +21,8 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
+        requireContext().setTheme(R.style.ECarmaActionBar)
         _binding = FragmentLoginBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
@@ -35,5 +38,10 @@ class LoginFragment : Fragment() {
                 findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
