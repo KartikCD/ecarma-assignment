@@ -69,6 +69,9 @@
         <action
             android:id="@+id/action_communityDetailsFragment_to_addBlockFragment"
             app:destination="@id/addBlockFragment" />
+        <action
+            android:id="@+id/action_communityDetailsFragment_to_manPowerDetailFragment"
+            app:destination="@id/manPowerDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/associationDetailFragment"
@@ -111,5 +114,14 @@
         <action
             android:id="@+id/action_addBlockDetailFragment_to_addBlockFragment"
             app:destination="@id/addBlockFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/manPowerDetailFragment"
+        android:name="io.kartikcd.ecarmaassignment.ui.mainfeed.community.manpower.ManPowerDetailFragment"
+        android:label="fragment_man_power_detail"
+        tools:layout="@layout/fragment_man_power_detail" >
+        <action
+            android:id="@+id/action_manPowerDetailFragment_to_communityDetailsFragment"
+            app:destination="@id/communityDetailsFragment" />
     </fragment>
 </navigation>

@@ -68,6 +68,8 @@ class CommunityDetailsFragment : Fragment() {
                 findNavController().navigate(R.id.action_communityDetailsFragment_to_associationDetailFragment)
             } else if (it == "Block details") {
                 findNavController().navigate(R.id.action_communityDetailsFragment_to_addBlockFragment)
+            } else if (it == "Manpower") {
+                findNavController().navigate(R.id.action_communityDetailsFragment_to_manPowerDetailFragment)
             }
         }
     }

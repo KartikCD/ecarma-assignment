@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ECarmaAssignment</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -35,11 +36,13 @@
     <string name="string_hint_poc_contact">Association POC Contact</string>
     <string name="string_hint_poc_email">Association POC Email ID</string>
     <string name="string_hint_poc_number">Member Flat Number</string>
-    
+
     <string name="string_hint_units">Total apartment units</string>
     <string name="string_hint_occupied">Total Units Occupied</string>
     <string name="string_hint_residing">Total Owners Residing</string>
     <string name="string_hint_floors">No of floors</string>
     <string name="string_hint_blocks">No of blocks</string>
     <string name="string_hint_name_block">Name of the blocks</string>
+
+    <string name="string_manpower_desc"><b>Description : </b>Common area cleaning<br /><b>Frequency : </b>Daily<br /><b>Resource HC : </b>10<br /><b>Last activity date : </b>22nd Aug 2021<br /><b>Agency Email ID : </b>xyz@gmail.com<br /><b>Agreement renewal Date : </b>2nd Jan 2022<br /><b>Agreement Copy : </b><font color='#005dff'>View</font></string>
 </resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuCommunity"
+        android:icon="@drawable/ic_community"
+        android:title="Community" />
+
+    <item
+        android:id="@+id/menuManpower"
+        android:icon="@drawable/ic_profile_ic"
+        android:title="Manpower" />
+
+    <item
+        android:id="@+id/menuAsset"
+        android:icon="@drawable/ic_assets"
+        android:title="Manpower" />
+
+    <item
+        android:id="@+id/menuAmenities"
+        android:icon="@drawable/ic_amenities"
+        android:title="Manpower" />
+</menu>
